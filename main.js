@@ -3,18 +3,19 @@ var body = document.querySelector("#body")
 var userId = document.querySelector("#userId")
 var btn = document.querySelector("#button")
 
-//function with click eventlistener
+  //function with click eventlistener
 btn.addEventListener('click',function(event){
-// grabbing input values
-  let titleValue = title.value
-  let bodyValue = body.value
-  let userIdValue = userId.value
+  // grabbing input values
+let titleValue = title.value
+let bodyValue = body.value
+let userIdValue = userId.value
 
-  let params = {title: titleValue, body: bodyValue, userId: parseInt(userIdValue) }
-//creating params to match original API & parseInt turns string into integer.
+  //creating params to match original API & parseInt turns string into integer.
+let params = {title: titleValue, body: bodyValue, userId: parseInt(userIdValue) }
 
 
-  fetch("http://jsonplaceholder.typicode.com/posts",{ //pulling API
+  //pulling API
+fetch("http://jsonplaceholder.typicode.com/posts",{
     method: "post",
     headers:{
       "Content-Type":"application/json"
@@ -26,5 +27,6 @@ btn.addEventListener('click',function(event){
       console.log(json)
     })
 
-  event.preventDefault() //prevents the whole page from refreshing when submitting
+    //prevents the whole page from refreshing when submitting
+  event.preventDefault()
 });

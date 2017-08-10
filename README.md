@@ -1,5 +1,6 @@
 # FromPost-FetchAPI
-JavaScript, PostMethod, FetchAPI
+
+A simple App that uses Fetch Libarys post method to send json objects to the dummy API.
 
 
 
